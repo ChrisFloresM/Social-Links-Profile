@@ -1,0 +1,140 @@
+:root {
+    /* Layout */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+
+    /* Colors */
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+
+    /* Typography */
+    --font-body-size: 14px;
+    --font-family: 'Inter', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* Box Model */
+    height: 100vh;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    /* Appearance */
+    font-family: var(--font-family), serif;
+    font-size: 1.4rem;
+    background-color: var(--color-grey-900);
+    color: var(--color-white);
+
+}
+
+/* Card component */
+.card {
+    /* Box Model */
+    width: 35rem;
+    padding: 3rem;
+    border-radius: 10px;
+
+    /* layout*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    /* Appearance */
+    background-color: var(--color-grey-800);
+}
+
+/* Image styles */
+.card__img {
+    /* Box Model */
+    width: 7rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* User data styles */
+.card__user {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    /* Appearance */
+    text-align: center;
+}
+
+.card__user-name {
+    /* Appearance */
+    font-weight: var(--font-weight-regular);
+}
+
+.card__user-location {
+    /* Appearance */
+    font-weight: var(--font-weight-bold);
+    color: var(--color-green);
+}
+
+/* Links */
+.card__links {
+    /* Box Model */
+    width: 100%;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    /* Appearance */
+    list-style: none;
+}
+
+.card__link a {
+    /* Box Model */
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 10px;
+
+    /* Appearance */
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-semibold);
+
+    /* Animations */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.card__link a:link,
+.card__link a:visited {
+    color: var(--color-white);
+    background-color: var(--color-grey-700);
+}
+
+.card__link a:hover,
+.card__link a:active {
+    color: var(--color-grey-800);
+    background-color: var(--color-green);
+}
